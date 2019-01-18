@@ -40,15 +40,6 @@ Promise.all([loadLevel("test"),createPanda()])
 
         timer.start();
     }); 
-const ad = loadImage("atlas/Anubirthday.png").then(img => {
-        const wishimg = img;
-        return function test(){
-            return wishimg;
-        }
-    });
-
-    Promise.all(ad,img);
-
 
     function wish(){
         timer.update = ()=>{}
@@ -59,10 +50,11 @@ const ad = loadImage("atlas/Anubirthday.png").then(img => {
         canvas.width= 940;
         context.fillRect(0,0,940,788);
 
-        var img = ad();
-        
+
+        loadImage("atlas/Anubirthday.png").then(img => {
+            
             context.drawImage(img,0,0);
-      
+        });
 
     }
 
