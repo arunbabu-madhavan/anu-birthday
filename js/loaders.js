@@ -20,7 +20,7 @@ export function LoadJSON(url){
 }
 
 export function loadSpritesheet(name){
-   return LoadJSON(`/sprites/${name}.json`)
+   return LoadJSON(`sprites/${name}.json`)
                 .then(sheetSpec =>  Promise.all([sheetSpec,loadImage(sheetSpec.imageUrl)])
                     .then(([sheetSpec,image])=>{
                         const sprites = new SpriteSheet(image,sheetSpec.tileSize);
@@ -48,7 +48,7 @@ export function loadSpritesheet(name){
 }
 
 export function loadLevel(name){
-    return LoadJSON(`/levels/${name}.json`).then
+    return LoadJSON(`levels/${name}.json`).then
     (levelSpec => 
         Promise.all([levelSpec, loadSpritesheet(levelSpec.spritesheet)]))
         .then(([levelSpec,bgsprites]) =>{
