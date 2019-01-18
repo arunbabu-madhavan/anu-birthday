@@ -52,7 +52,7 @@ Promise.all([loadLevel("test"),createPanda()])
         context.fillRect(0,0,940,788);
 
 
-        loadImage("/atlas/Anubirthday.png").then(img => {
+        loadImage("atlas/Anubirthday.png").then(img => {
             context.drawImage(img,0,0);
         });
 
