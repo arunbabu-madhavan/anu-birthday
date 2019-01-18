@@ -1,0 +1,22 @@
+{
+    "imageUrl":"/atlas/pooh.png",
+    "frames":[
+        {
+            "name":"idle",
+            "rect":[354,21,48,59]
+        },
+        {
+            "name":"walk-1",
+            "rect":[427,21,48,59]
+        },
+        {
+            "name":"walk-2",
+            "rect":[498,21,48,59]
+        },
+        {
+            "name":"jump-2",
+            "rect":[73,0,88,84]
+        }
+    ]
+   
+}
